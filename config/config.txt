@@ -1,0 +1,20 @@
+[TREE]
+# 服务器配置
+!debug=1
+server=健保通接口服务网关
+
+# 初始化对象
+$Singleton=init.txt
+$action=actions.txt
+
+# 定义可能使用的协议
+*LYLabProtocol=net.vicp.lylab.utils.internet.impl.LYLabProtocol
+
+故意制造一个错误┌( ಠ_ಠ)┘
+
+# 白名单配置
+ipWhiteList=127.0.0.1
+
+# 外部调用的url，在此统一配置
+urlMonitor:0=http://10.129.58.43/EBaoLifeMonitorGateway/action
+urlMonitor:1=http://42.96.164.183/EBaoLifeMonitorGateway/action
