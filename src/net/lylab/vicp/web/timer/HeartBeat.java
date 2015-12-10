@@ -31,8 +31,6 @@ public class HeartBeat extends TimerJob {
 		String now = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 		Message toServer = new Message();
 		toServer.setKey("Heartbeat");
-		toServer.getBody().put("hKey", serverName + "最后响应时间");
-		toServer.getBody().put("hValue", now);
 		toServer.getBody().put("lastTime", now);
 		HttpUtils.sendPost(
 				CoreDef.config.getString("urlMonitor")

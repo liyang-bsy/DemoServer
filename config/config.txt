@@ -16,5 +16,5 @@ $action=actions.txt
 ipWhiteList=127.0.0.1
 
 # 外部调用的url，在此统一配置
-urlMonitor:0=http://10.129.58.43/EBaoLifeMonitorGateway/action
-urlMonitor:1=http://42.96.164.183/EBaoLifeMonitorGateway/action
+urlMonitor:0=http://0
+urlMonitor:1=http://1
