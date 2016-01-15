@@ -1,14 +1,14 @@
-package net.lylab.vicp.web.timer;
+package net.vicp.lylab.web.timer;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import flexjson.JSONSerializer;
-import net.lylab.vicp.web.utils.HttpUtils;
 import net.vicp.lylab.core.CoreDef;
 import net.vicp.lylab.core.model.Message;
 import net.vicp.lylab.utils.timer.TimerJob;
+import net.vicp.lylab.web.utils.HttpUtils;
 
 public class HeartBeat extends TimerJob {
 	

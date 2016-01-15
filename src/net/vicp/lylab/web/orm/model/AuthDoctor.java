@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.orm.model;
+package net.vicp.lylab.web.orm.model;
 
 import java.util.Date;
 

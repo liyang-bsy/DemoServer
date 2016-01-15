@@ -1,10 +1,10 @@
-package net.lylab.vicp.web.action.runtime;
+package net.vicp.lylab.web.action.runtime;
 
 import java.util.Date;
 import java.util.Map;
 
-import net.lylab.vicp.web.core.BaseAction;
 import net.vicp.lylab.utils.Utils;
+import net.vicp.lylab.web.core.BaseAction;
 
 public class CheckRuntime extends BaseAction {
 

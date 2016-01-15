@@ -1,9 +1,9 @@
-package net.lylab.vicp.web.orm.mapper;
+package net.vicp.lylab.web.orm.mapper;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import net.lylab.vicp.web.orm.model.AuthDoctor;
+import net.vicp.lylab.web.orm.model.AuthDoctor;
 
 /**
  * 用户授权医生Mapper

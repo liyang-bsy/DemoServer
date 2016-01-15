@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.servlet;
+package net.vicp.lylab.web.servlet;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.orm.mapper;
+package net.vicp.lylab.web.orm.mapper;
 
 import java.util.List;
 

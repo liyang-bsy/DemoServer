@@ -1,6 +1,6 @@
 *LYTaskQueue=net.vicp.lylab.utils.tq.LYTaskQueue
 
-*HeartBeat=net.lylab.vicp.web.timer.HeartBeat
+*HeartBeat=net.vicp.lylab.web.timer.HeartBeat
 ^serverName=&server
 
 []timeJobs=&HeartBeat
@@ -13,7 +13,7 @@
 ^expireTime=259200000
 ^threshold=0.9
 
-*Logger=net.vicp.lylab.lyserver.utils.Logger
+*Logger=net.vicp.lylab.web.utils.Logger
 ^filePath=D:/BAuthServerData/record
 ^fileSuffix=.log
 

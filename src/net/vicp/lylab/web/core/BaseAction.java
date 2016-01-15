@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.core;
+package net.vicp.lylab.web.core;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,11 +12,11 @@ import org.apache.ibatis.session.SqlSession;
 
 import flexjson.JSONDeserializer;
 import flexjson.JSONSerializer;
-import net.lylab.vicp.web.utils.Page;
 import net.vicp.lylab.core.NonCloneableBaseObject;
 import net.vicp.lylab.core.interfaces.Executor;
 import net.vicp.lylab.core.model.Message;
 import net.vicp.lylab.mybatis.MultiSourcesSession;
+import net.vicp.lylab.web.utils.Page;
 
 public abstract class BaseAction extends NonCloneableBaseObject implements
 		Runnable, Executor {

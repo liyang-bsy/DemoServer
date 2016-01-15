@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.servlet;
+package net.vicp.lylab.web.servlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,8 +15,6 @@ import org.apache.commons.logging.LogFactory;
 
 import flexjson.JSONDeserializer;
 import flexjson.JSONSerializer;
-import net.lylab.vicp.web.core.BaseAction;
-import net.lylab.vicp.web.utils.Logger;
 import net.vicp.lylab.core.CoreDef;
 import net.vicp.lylab.core.model.Message;
 import net.vicp.lylab.mybatis.MultiSourcesSession;
@@ -24,6 +22,8 @@ import net.vicp.lylab.mybatis.SQLSessionFactory;
 import net.vicp.lylab.utils.Config;
 import net.vicp.lylab.utils.Utils;
 import net.vicp.lylab.utils.tq.Task;
+import net.vicp.lylab.web.core.BaseAction;
+import net.vicp.lylab.web.utils.Logger;
 
 @WebServlet("/interface")
 public class KeyDispatcherServlet extends HttpServlet {

@@ -1,4 +1,4 @@
-package net.lylab.vicp.web.filter;
+package net.vicp.lylab.web.filter;
 
 import java.io.IOException;
 import java.net.InetAddress;
