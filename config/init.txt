@@ -13,6 +13,10 @@
 ^expireTime=259200000
 ^threshold=0.9
 
+*Logger=net.vicp.lylab.lyserver.utils.Logger
+^filePath=D:/BAuthServerData/record
+^fileSuffix=.log
+
 *TimeoutController=net.vicp.lylab.utils.controller.TimeoutController
 
 []protocols=&LYLabProtocol

@@ -16,6 +16,7 @@ import org.apache.commons.logging.LogFactory;
 import flexjson.JSONDeserializer;
 import flexjson.JSONSerializer;
 import net.lylab.vicp.web.core.BaseAction;
+import net.lylab.vicp.web.utils.Logger;
 import net.vicp.lylab.core.CoreDef;
 import net.vicp.lylab.core.model.Message;
 import net.vicp.lylab.mybatis.MultiSourcesSession;
@@ -116,7 +117,9 @@ public class KeyDispatcherServlet extends HttpServlet {
 			output = action.getOutput();
 			if (action.getCode() != null)
 				output.setCode(action.getCode());
-			if (action.getRetMsg() != null)
+			if (action.getCode() == 0)
+				output.setMessage("ok");
+			else if(action.getRetMsg() != null)
 				output.setMessage(action.getRetMsg());
 		} while (false); } catch (Throwable t) {
 			// 任何情况下发生异常，那就报告错误
@@ -131,6 +134,8 @@ public class KeyDispatcherServlet extends HttpServlet {
 		response.getOutputStream().close();
 		
 		// May be you want to log here
+		((Logger) CoreDef.config.getConfig("Singleton").getObject("Logger")).appendLine("Access key:" + key
+				+ CoreDef.LINE_SEPARATOR + "Before:" + request + CoreDef.LINE_SEPARATOR + "After:" + response);
 	}
 
 	public String readData(HttpServletRequest request) throws IOException {

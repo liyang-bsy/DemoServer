@@ -24,7 +24,6 @@ public class CheckRuntime extends BaseAction {
 			sbody.put("当前时间", Utils.format(new Date(), "yyyy-MM-dd HH-mm:ss"));
 			
 			code = 0;
-			retMsg = "成功";
 		} while(false); } catch (Exception e) { e.printStackTrace(); }
 
 	}
