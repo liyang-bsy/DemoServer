@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src="jquery.js">
+</script>
+<script>
+	$(document).ready(function() {
+		$("#btn").click(function() {
+			$.post($("#url").val(), $("#param").val(), function(data) {
+				$('#result').text(data);
+			});
+		});
+	});
+</script>
+
+<head>
+<meta charset="UTF-8">
+<title>后台协议测试界面</title>
+
+</head>
+
+<body>
+
+<p>接入url</p>
+<input type="text" id="url" style="width: 600px; height: 20px;" value="interface" />
+<p>输入请求json</p>
+<textarea id="param" style="width: 600px; height: 150px;">
+{
+    "code": 0,
+    "message": "ok",
+    "key": "Invalid",
+    "body": {},
+    "token": "",
+    "uuid": "",
+    "time": null
+}
+</textarea>
+<br/>
+<button id="btn">提交</button>
+<p>服务器回复json</p>
+<textarea id="result" style="width: 600px; height: 150px;">
+</textarea>
+
+</body>
+</html>

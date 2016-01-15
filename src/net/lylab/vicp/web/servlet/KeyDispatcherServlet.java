@@ -24,7 +24,7 @@ import net.vicp.lylab.utils.Config;
 import net.vicp.lylab.utils.Utils;
 import net.vicp.lylab.utils.tq.Task;
 
-@WebServlet("/action")
+@WebServlet("/interface")
 public class KeyDispatcherServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -42,7 +42,7 @@ public class KeyDispatcherServlet extends HttpServlet {
 		Message input = null;
 		Message output = new Message();
 		// 这两个字符串的目标其实是保留原始数据的引用
-		String before = readJson(request), after = "";
+		String before = readData(request), after = "";
 		String key = null;
 		try { do {
 			// JSON解析
@@ -133,31 +133,7 @@ public class KeyDispatcherServlet extends HttpServlet {
 		// May be you want to log here
 	}
 
-	/**
-	 * 相比另一个方法较慢，但是一定可以解析数据，每组名称相同的key有序，key之间不保证有序
-	 * @param request
-	 * @return
-	 * @throws IOException
-	 */
-	/*public String readJson(HttpServletRequest request) throws IOException {
-		Map<String, String[]> reader = request.getParameterMap();
-		StringBuilder str = new StringBuilder();
-		boolean first = true;
-		for (String key : reader.keySet()) {
-			for (String value : reader.get(key)) {
-				if (first)
-					first = false;
-				else
-					str.append("&");
-				str.append(key + "=" + value);
-			}
-		}
-		return str.toString();
-	}
-	*/
-	
-	// 快，但是无法解析某些时候的GET请求
-	public String readJson(HttpServletRequest request) throws IOException {
+	public String readData(HttpServletRequest request) throws IOException {
 		StringBuilder str = new StringBuilder();
 		BufferedReader reader = request.getReader();
 		String line = "";
